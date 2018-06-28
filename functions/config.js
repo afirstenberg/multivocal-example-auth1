@@ -27,6 +27,13 @@ var requirements = {
   "Intent.user.name":  "User/IsAuthenticated"
 };
 
+var validate = {
+  "https://accounts.google.com":{
+    // The Client ID issued in Account Linking -> Client information
+    "aud": "PUT YOUR CLIENT ID HERE"
+  }
+};
+
 var config = {
   Local:{
     en:{
@@ -39,12 +46,7 @@ var config = {
   },
   Setting:{
     Requirements: {
-      Auth: {
-        "https://accounts.google.com":{
-          // The Client ID issued in Account Linking -> Client information
-          "aud": "PUT YOUR CLIENT ID HERE"
-        }
-      }
+      Auth: validate
     }
   }
 };
